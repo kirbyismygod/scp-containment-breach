@@ -23,6 +23,15 @@ public class BlockInit {
     public static final RegistryObject<Block> TILE   = registerBlock("tile",
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
                     .strength(5f,6).sound(SoundType.STONE).requiresCorrectToolForDrops()), SCP.SCP_TAB);
+    public static final RegistryObject<Block> WHITE_WALL   = registerBlock("white_wall",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(5f,6).sound(SoundType.STONE).requiresCorrectToolForDrops()), SCP.SCP_TAB);
+    public static final RegistryObject<Block> BROWN_WALL   = registerBlock("brown_wall",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(5f,6).sound(SoundType.STONE).requiresCorrectToolForDrops()), SCP.SCP_TAB);
+    public static final RegistryObject<Block> BROWN_STRIPED_WALL   = registerBlock("brown_striped_wall",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(5f,6).sound(SoundType.STONE).requiresCorrectToolForDrops()), SCP.SCP_TAB);
 
 
 
