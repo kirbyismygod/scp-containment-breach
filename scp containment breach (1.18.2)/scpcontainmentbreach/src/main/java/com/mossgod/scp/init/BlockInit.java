@@ -1,6 +1,8 @@
 package com.mossgod.scp.init;
 
 import com.mossgod.scp.SCP;
+import com.mossgod.scp.init.custom.blocks.CeilingLamp;
+import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
@@ -33,7 +35,12 @@ public class BlockInit {
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
                     .strength(5f,6).sound(SoundType.STONE).requiresCorrectToolForDrops()), SCP.SCP_TAB);
 
-
+    public static final RegistryObject<Block> CEILING_LAMP = registerBlock("ceiling_lamp",
+            () -> new CeilingLamp(BlockBehaviour.Properties.of(Material.METAL).noCollission()
+                    .strength(2f).requiresCorrectToolForDrops().lightLevel(
+                            (state) -> state.getValue(CeilingLamp.CLICKED) ? 15 : 0)
+                    .sound(SoundType.COPPER)),
+           SCP.SCP_TAB);
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
