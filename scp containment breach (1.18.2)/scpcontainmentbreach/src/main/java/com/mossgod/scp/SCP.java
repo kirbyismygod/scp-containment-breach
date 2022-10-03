@@ -37,6 +37,7 @@ public class SCP {
 	}
 	private static void clientSetup(final FMLClientSetupEvent event) {
 		ItemBlockRenderTypes.setRenderLayer(BlockInit.CEILING_LAMP.get(), RenderType.cutout());
+		ItemBlockRenderTypes.setRenderLayer(BlockInit.SECURITY_CAMERA.get(), RenderType.cutout());
 	}
 
 }

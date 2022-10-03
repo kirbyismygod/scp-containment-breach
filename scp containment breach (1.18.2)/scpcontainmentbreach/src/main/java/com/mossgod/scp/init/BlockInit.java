@@ -42,6 +42,13 @@ public class BlockInit {
                     .sound(SoundType.COPPER)),
            SCP.SCP_TAB);
 
+
+    public static final RegistryObject<Block> SECURITY_CAMERA = registerBlock("security_camera",
+            () -> new CeilingLamp(BlockBehaviour.Properties.of(Material.METAL).noCollission()
+                    .strength(2f).requiresCorrectToolForDrops()
+                    .sound(SoundType.COPPER)),
+            SCP.SCP_TAB);
+
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn, tab);
