@@ -1,4 +1,7 @@
 {
   "itemGroup.scp": "SCP",
-  "block.scp.tile": "Tile"
+  "block.scp.tile": "Tile",
+  "entity.scp.scp529": "SCP 529 josie the half cat",
+  "item.scp.scp_420_j":"SCP-420-j",
+  "item.scp.scp_500":"SCP-500"
 }

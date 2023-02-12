@@ -1,6 +1,7 @@
 package com.mossgod.scp;
 
 import com.mossgod.scp.init.BlockInit;
+import com.mossgod.scp.init.EntityInit;
 import com.mossgod.scp.init.ItemInit;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
@@ -24,15 +25,29 @@ public class SCP {
 			return new ItemStack(BlockInit.TILE.get());
 		}
 	};
-	
-	
+
+
+
+
+
+
+
+
+
+
+
+
+
 	
 	public SCP() {
 		IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
 		BlockInit.BLOCKS.register(bus);
 		ItemInit.ITEMS.register(bus);
+		EntityInit.ENTITY_TYPES.register(bus);
 		MinecraftForge.EVENT_BUS.register(this);
 		bus.addListener(SCP::clientSetup);
+
+
 
 	}
 	private static void clientSetup(final FMLClientSetupEvent event) {
